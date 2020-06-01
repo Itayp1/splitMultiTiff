@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.io.IOException;
-import java.util.List;
 
 @RestController
 public class SplitMultiTiffController {
@@ -20,8 +19,6 @@ public class SplitMultiTiffController {
         SplitMultiTiff splitMultiTiff = new SplitMultiTiff();
         SplitTifRes documents =  splitMultiTiff.splitTiff(splitTifReq.getEcnodedFile());
 
-//       splitTifRes.setSingleDocument("SDfdsf");
-//       splitTifRes.setSingleDocument("sdfdsfsd");
 
         return new ResponseEntity<>(documents, HttpStatus.OK);
 
